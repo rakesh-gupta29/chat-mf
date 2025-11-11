@@ -1,9 +1,12 @@
 {
-  "$schema": "https://openapi.vercel.sh/vercel.json",
   "rewrites": [
     {
-      "destination": "https://workflow-mf.vercel.app/",
-      "source": "/workflow"
+      "source": "/workflow",
+      "destination": "https://workflow-mf.vercel.app"
+    },
+    {
+      "source": "/workflow/:path*",
+      "destination": "https://workflow-mf.vercel.app/:path*"
     }
   ]
 }

@@ -6,12 +6,15 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const nextConfig = {
   reactStrictMode: true,
-  async redirects() {
+  async rewrites() {
     return [
       {
         source: "/workflow",
         destination: "https://workflow-mf.vercel.app/",
-        permanent: false,
+      },
+      {
+        source: "/workflow/:path*",
+        destination: "https://workflow-mf.vercel.app/:path*",
       },
     ];
   },

@@ -1,13 +1,27 @@
+"use client";
+
 import Head from "next/head";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 import styles from "../styles/Home.module.css";
+import { initAuth, login } from "rakesh-ds-common/auth";
+import { useEffect } from "react";
 const SlButton = dynamic(
   () => import("rakesh-wc-design-system/dist/react/button"),
   { ssr: false }
 );
 
 export default function Home() {
+  const consoleThis = () => {
+    login({ email: "test@test.com", password: "test" });
+  };
+
+  useEffect(() => {
+    initAuth({
+      apiBaseUrl: "https://redrob-ai-backend-development.up.railway.app",
+    });
+  }, []);
+
   return (
     <div className={styles.container}>
       <Head>
@@ -17,22 +31,9 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>Welcome</h1>
-        <SlButton>hello world </SlButton>
+        <h1>chat app </h1>
+        <SlButton onClick={consoleThis}>login </SlButton>
       </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{" "}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
     </div>
   );
 }

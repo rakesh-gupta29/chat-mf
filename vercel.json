@@ -7,6 +7,14 @@
     {
       "source": "/workflow/:path*",
       "destination": "https://workflow-mf.vercel.app/:path*"
+    },
+    {
+      "source": "/rakesh",
+      "destination": "https://rakesh-gupta29.github.io"
+    },
+    {
+      "source": "/rakesh/:path*",
+      "destination": "https://rakesh-gupta29.github.io/:path*"
     }
   ]
 }

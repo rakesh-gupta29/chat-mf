@@ -15,6 +15,14 @@
     {
       "source": "/rakesh/:path*",
       "destination": "https://rakesh-gupta29.github.io/:path*"
+    },
+    {
+      "source": "/workflow",
+      "destination": "https://n8n-production-353d.up.railway.app/"
+    },
+    {
+      "source": "/workflow/:path*",
+      "destination": "https://n8n-production-353d.up.railway.app/:path*"
     }
   ]
 }

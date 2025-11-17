@@ -1,14 +1,6 @@
 {
   "rewrites": [
     {
-      "source": "/workflow",
-      "destination": "https://workflow-mf.vercel.app"
-    },
-    {
-      "source": "/workflow/:path*",
-      "destination": "https://workflow-mf.vercel.app/:path*"
-    },
-    {
       "source": "/rakesh",
       "destination": "https://rakesh-gupta29.github.io"
     },

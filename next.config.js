@@ -9,12 +9,20 @@ const nextConfig = {
   async rewrites() {
     return [
       {
-        source: "/workflow",
-        destination: "https://workflow-mf.vercel.app/",
+        source: '/rakesh',
+        destination: '/api/proxy/rakesh',
       },
       {
-        source: "/workflow/:path*",
-        destination: "https://workflow-mf.vercel.app/:path*",
+        source: '/rakesh/:path*',
+        destination: '/api/proxy/rakesh/:path*',
+      },
+      {
+        source: '/workflow',
+        destination: '/api/proxy/workflow',
+      },
+      {
+        source: '/workflow/:path*',
+        destination: '/api/proxy/workflow/:path*',
       },
     ];
   },
